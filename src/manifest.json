@@ -1,0 +1,23 @@
+{
+    "description": "Advanced Bookmark handling.",
+    "manifest_version": 2,
+    "name": "Bookie",
+    "version": "1.0",
+    
+    "icons": {
+        "48": "assets/icons/border-48.png"
+    },
+    
+    "permissions": [
+        "bookmarks",
+        "<all_urls>"
+    ],
+
+    "browser_action": {
+        "default_popup": "html/popup/bookie_toolbar.html",
+        "default_icon": {
+            "16": "assets/icons/page-16.png",
+            "32": "assets/icons/page-32.png"
+        }
+    }
+}

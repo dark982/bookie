@@ -1,0 +1,183 @@
+.treeview {
+
+    font: normal 16px "Segoe UI", Arial, Sans-serif;
+    user-select: none;
+
+    &, 
+    ul, 
+    li {
+        padding: 0;
+        margin: 0;
+        
+        list-style: none;
+    }    
+
+    a {
+        color: #00f;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        &::before {
+            content: " ";
+            background-image: url("/assets/fa-icons/bookmark.svg");
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            background-position: center;
+            display: inline-block;
+            width: 16px;
+            height: 12px;
+            margin-left: 6px;
+            margin-right: 4px;
+        }
+    }
+    
+    ul {
+        margin-left: 14px;
+        padding-left: 26px;
+        
+        border-left: 1px solid #999999;
+        
+        & > li {
+            & > input {
+                position: absolute;
+                opacity: 0;
+                
+                & + label {
+                    &::before {
+
+                        content: attr(data-count);
+                        width: 16px;
+                        margin: 0 8px 0 0;
+                        //vertical-align: middle;
+
+                        background-image: url("/assets/fa-icons/folder.svg");
+                        background-repeat: no-repeat;
+                        background-size: 30px 32px;
+                        background-position: center;
+
+                        font-size: 14px;
+
+
+                        height: 30px;
+                        width: 32px;
+
+                        line-height: 31px;
+
+                        display: inline-block;
+
+                        text-align: center;
+                    }
+                }
+                
+                & + label + ul {
+                    display: none;
+                }
+                
+                &:checked {
+                    & + label {
+                        &:before {
+                            background-image: url("/assets/fa-icons/folder-open.svg");
+                            content: "_";
+                        }
+                        
+                    }
+                    
+                    & + label + ul {
+                        display: block;
+                    }
+                }
+                
+                &:disabled {
+                    & + label {
+                        cursor: not-allowed;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+
+    & > ul {
+        margin-left: 0px;
+        padding-left: 0px;
+        border-left: 0;
+    }
+
+
+    
+    /*
+    
+
+    a {
+        color: #00f;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    input {
+        position: absolute;
+        
+
+        & + label {
+            & + ul {
+                margin: 0 0 0 22px;
+            }
+        }
+
+        & ~ ul {
+            display: none;
+        }
+
+        &:disabled {
+            & + label {
+                cursor: default;
+                opacity: .6;
+            }
+        }
+
+        &:checked {
+            &:not(:disabled){
+                & ~ ul {
+                    display: block;
+                }
+            }
+            
+            & + label {
+                &::before {
+                    //background: url("/fa-icons/minus-square.svg") no-repeat;
+                }
+            }
+        }
+    }
+
+    label {
+        //background: url("/fa-icons/plus-square.svg") no-repeat;
+    }
+
+    label::before {
+        
+        
+        //background: url("/fa-icons/folder-open.svg") no-repeat;
+    }
+
+    label,
+    label::before {
+        cursor: pointer;
+        //background: url("/fa-icons/folder.svg") no-repeat;
+    }
+
+    label,
+    label::before,
+    a {
+        display: inline-block;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+    }*/
+}
