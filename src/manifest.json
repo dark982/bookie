@@ -2,7 +2,17 @@
     "description": "Advanced Bookmark handling.",
     "manifest_version": 2,
     "name": "Bookie",
-    "version": "1.0",
+    "version": "0.1",
+    "author": "Robin Daniels aka dark982",
+    
+    "developer": {
+        "name": "Robin Daniels aka dark982",
+        "url": "https://github.com/dark982/bookie"
+    },
+
+    "incognito": "not_allowed",
+    
+    
     
     "icons": {
         "48": "assets/icons/border-48.png"
