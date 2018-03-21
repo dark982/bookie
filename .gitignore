@@ -2,3 +2,6 @@ dist/*
 node_modules
 .bowerrc
 package-lock.json
+nbproject
+nbproject/*
+nbproject/**
