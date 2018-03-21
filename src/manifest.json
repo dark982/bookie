@@ -13,6 +13,13 @@
         "<all_urls>"
     ],
 
+    "web_accessible_resources": [
+
+        "templates/test.mst"
+    ],
+    
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
     "browser_action": {
         "default_popup": "html/popup/bookie_toolbar.html",
         "default_icon": {

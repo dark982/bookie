@@ -11,17 +11,22 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 
 var jsFiles = [
-    './src/js/events/*.js',
+    
     
     './src/js/BookiePages.js',
     './src/js/BookmarkUtils.js',
     './src/js/Bookmarks.js',
     './src/js/Templater.js',
     './src/js/Bookie.js',
+    './src/js/Utils.js',
+    
+    
+    './src/js/events/*.js',
+    
 ];
 
 var jsLib = [
-    './node_modules/mustache/mustache.min.js',
+    './node_modules/underscore/underscore-min.js',
     './libraries/jQuery.js',
     './libraries/fontawesome/js/fontawesome-all.min.js',
     
@@ -39,11 +44,17 @@ gulp.task('default', function () {
     gulp.src('./src/assets/**')
             .pipe(gulp.dest('./dist/assets'));
     
+    gulp.src('./src/fonts/**')
+            .pipe(gulp.dest('./dist/fonts'));
+    
     gulp.src('./src/html/**')
             .pipe(gulp.dest('./dist/html'));
     
     gulp.src('./src/css/**')
             .pipe(gulp.dest('./dist/css'));
+    
+    gulp.src('./src/templates/**')
+            .pipe(gulp.dest('./dist/templates'));
     
     gulp.src('./src/manifest.json')
             .pipe(gulp.dest('./dist'));

@@ -1,0 +1,39 @@
+<nav class="nav-megamenu" id='nav-main-menu'>
+    <% _.each(navitems, function(item, key, arr) { %>
+        <% if(item.type == 'navitem') { %>
+            <a href="#" id='<%= item.id %>'><%= item.title %></a>
+        <% } else if (item.type == 'navdropdown') { %>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <%= item.title %>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="header">
+                        <h2>
+                            <%= item.headline %>
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <% _.each(item.category, function(item, key, arr) { %>
+                            <div class="column">
+                                <h3>
+                                    <%= item.headline %>
+                                </h3>
+                                <% _.each(item.items, function(item, key, arr) { %>
+                                    <a href="#" id='<%= item.id %>'>
+                                        <%= item.title %>
+                                    </a>
+                                <% }); %>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <% }); %>  
+    
+    <span id="activity" style="display: none;">
+        <i class="fas fa-sync fa-spin"></i>
+    </span>
+</nav>

@@ -1,0 +1,60 @@
+#order-reverse:checked {
+    & ~ .sorting-container > div {
+        flex-direction: column;
+    }
+}
+
+#order-normal:checked {
+    & ~ .sorting-container > div {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+.sorting-container {
+
+    overflow-y: scroll;
+    position: absolute;
+
+    
+    bottom: 0;
+    top: 48px;
+    border-top: 1px solid;
+    left: 0;
+    right: 0;
+    padding: 8px;
+
+    & > div {
+
+        display: flex;
+
+        
+        .sorted-link-container {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #999;
+            border-radius: 8px;
+
+            hr {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+            a {
+                display: block;
+            }
+
+            .count {
+                display: inline-block;
+                margin-right: 8px;
+                border-radius: 50%;
+                padding: 4px;
+                background-color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                min-width: 40px;
+            }
+
+        }
+    }
+}

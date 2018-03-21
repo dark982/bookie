@@ -1,0 +1,101 @@
+ul {
+    &.editable-bookmarks {
+
+        list-style-type: none;
+        padding-left: 0;
+        
+
+        li {
+
+            display: flex;
+            justify-content: space-between;
+            background-color: #AAA;
+            margin-bottom: 2px;
+            padding: 8px;
+            
+            &:hover {
+                background-color: #EEE;
+            }
+
+            &.editable-bookmark {
+                span {
+                    
+                    &.title {
+                        flex-grow: 1;
+                    }
+                    
+                    &.httpstatus {
+                        width: 64px;
+                        text-align: center;
+                    }
+                    
+                    &.time {
+                        flex-grow: 0;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+
+                    &.buttons {
+                        margin: -8px;
+                        margin-left: 16px;
+
+                        flex-grow: 0;
+                        
+                        
+                        
+                        background-color: #000;
+
+                        a {
+                            
+                            text-decoration: none;
+                            
+                            font-size: 24px;
+
+                            padding-left: 12px;
+                            padding-right: 12px;
+                            
+                            width: 38px;
+                            height: 38px;
+
+                            
+                            color: #FFF;
+                            
+                            color: #FFF;
+                            line-height: 38px;
+                        
+                            &:hover {
+                                background-color: #090;
+                            }
+                            
+                            &[data-action='del-aprove'], &[data-action='del'] {
+                                
+                                &:hover {
+                                    background-color: #F00;
+                                }
+                            }
+                            
+                            &[data-action='del'] {
+                                .fa-question-circle {
+                                    display: none;
+                                }
+                            }
+
+                            &[data-action='del-aprove'] {
+
+                            }
+
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
